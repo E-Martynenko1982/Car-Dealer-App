@@ -1,1 +1,0 @@
-# Front-end-JS-engineer-test-assessment---the-Car-Dealer-App
