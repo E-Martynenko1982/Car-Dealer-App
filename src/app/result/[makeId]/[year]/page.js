@@ -1,7 +1,8 @@
 import ModelsClient from "./ModelsClient";
+import { Suspense } from "react";
 
 export default async function ResultPage({ params }) {
-  const { makeId, year } = params;
+  const { makeId, year } = await params;
   const modelsUrlBase = process.env.NEXT_PUBLIC_API_GET_MODELS_BASE;
 
   if (!modelsUrlBase) {
@@ -16,8 +17,11 @@ export default async function ResultPage({ params }) {
   }
   const data = await res.json();
 
-  return <ModelsClient models={data.Results || []} year={year} />;
+  return (
+    <Suspense fallback={<div>Loading...</div>}>
+      <ModelsClient models={data.Results || []} year={year} />
+    </Suspense>
+  );
 }
-
 
 
