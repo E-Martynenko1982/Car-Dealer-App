@@ -1,9 +1,9 @@
 "use client";
+
 import React, { useState } from "react";
 import Link from "next/link";
 
 export default function HomePageClient({ makes, years }) {
-
   const [selectedMake, setSelectedMake] = useState("");
   const [selectedYear, setSelectedYear] = useState("");
 
@@ -52,8 +52,7 @@ export default function HomePageClient({ makes, years }) {
       </div>
       <Link
         href={isNextDisabled ? "#" : `/result/${selectedMake}/${selectedYear}`}
-        className={`px-4 py-2 rounded text-white bg-blue-500 ${isNextDisabled ? "cursor-not-allowed opacity-50" : "hover:bg-blue-600"
-          }`}
+        className={`px-4 py-2 rounded text-white bg-blue-500 ${isNextDisabled ? "cursor-not-allowed opacity-50" : "hover:bg-blue-600"}`}
       >
         Next
       </Link>

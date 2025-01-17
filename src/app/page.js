@@ -1,4 +1,3 @@
-import React from "react";
 import HomePageClient from "./HomePageClient";
 
 export default async function HomePage() {
@@ -16,4 +15,4 @@ export default async function HomePage() {
   const years = Array.from({ length: currentYear - 2015 + 1 }, (_, i) => 2015 + i);
 
   return <HomePageClient makes={makes} years={years} />;
-}
+} 

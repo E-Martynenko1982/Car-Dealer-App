@@ -1,10 +1,8 @@
-import React from "react";
 import ModelsClient from "./ModelsClient";
 
 export default async function ResultPage({ params }) {
-  const { makeId, year } = await params;
+  const { makeId, year } = params;
   const modelsUrlBase = process.env.NEXT_PUBLIC_API_GET_MODELS_BASE;
-
 
   if (!modelsUrlBase) {
     throw new Error("NEXT_PUBLIC_API_GET_MODELS_BASE is not defined in .env.local");

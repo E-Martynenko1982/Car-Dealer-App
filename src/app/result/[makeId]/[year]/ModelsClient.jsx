@@ -1,4 +1,5 @@
 "use client";
+
 import React from "react";
 
 export default function ModelsClient({ models, year }) {
@@ -19,14 +20,13 @@ export default function ModelsClient({ models, year }) {
       <ul className="space-y-2">
         {models.map((model, index) => (
           <li
-            key={`${model.Make_ID}-${index}`}
+            key={`${model.Make_ID}- ${index}`}
             className="border-b border-gray-200 py-2"
           >
             <span className="font-medium">{model.Model_Name}</span>
           </li>
         ))}
       </ul>
-    </main>
+    </main >
   );
 }
-
