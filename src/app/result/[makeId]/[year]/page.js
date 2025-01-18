@@ -29,7 +29,7 @@ export default async function ResultPage({ params }) {
   }
 
   const fetchUrl = `${modelsUrlBase}/makeId/${makeId}/modelyear/${year}?format=json`;
-  const res = await fetch(fetchUrl, { cache: "no-store" });
+  const res = await fetch(fetchUrl);
 
   if (!res.ok) {
     throw new Error(`HTTP error! status: ${res.status}`);
